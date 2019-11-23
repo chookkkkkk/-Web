@@ -276,3 +276,498 @@ div.jd_wrapper {}
     right: 23px;
     top: 0px;
 }
+
+/* 头部导航 */
+.jd_header {
+    width: 100%;
+    height: 46px;
+    /* background-color: lightgoldenrodyellow; */
+    position: relative;
+}
+.jd_header .the_bot_line {
+    width: 100%;
+    height: 10px;
+    background-image: url(../images/bottombanner.jpg);
+    position: absolute;
+    top: 36px;
+    z-index: 0;
+}
+.jd_header > div .img_box {
+    width: 210px;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background-image: url(../images/img1.jpg);
+    position: absolute;
+    z-index: 10;
+}
+.jd_header > div {}
+.jd_header > div ul {
+    padding-left: 230px;
+    height: 46px;
+    width: 840px;
+    float: left;
+
+}
+.jd_header > div ul li {
+    float: left;
+    margin-top: 3px;
+
+}
+.jd_header > div ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 16px 19px 0; 
+    color: #333;
+    font-size: 14px;
+}
+.jd_header > div ul li a:hover {
+    background-color: whitesmoke;
+}
+.jd_header > div .header_last_img {
+    float: right;
+    background-image: url(../images/free.jpg);
+    width: 140px;
+    height: 44px;
+}
+/* 头部导航end */
+
+/* <!-- 页面主体内容 --> */
+.jd_main {}
+.jd_main .main_con {
+    width: 1570px;
+    margin: 0 auto;
+}
+.jd_main .jd_main_gross{
+    padding-left: 180px;
+    background-image: url(../images/light.jpg);
+    background-position: left;
+    background-repeat: no-repeat ;
+    height: 466px;
+}
+.jd_main .jd_main_gross > div{
+    background-image: url(../images/light.jpg);
+    background-position: right;
+    background-repeat: repeat-y;
+    width: 1210px;
+    height: 466px;
+}
+
+.jd_main .jd_main_gross > div {}
+.jd_main .jd_main_gross > div .container {
+    height: 466px;
+}
+.container .main_left {
+    height: 466px;
+}
+.container .main_left ul {}
+.container .main_left ul li {
+}
+.container .main_left ul li a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    height: 29.1px;
+    width: 213px;
+    border: 1px solid #c81623;
+    background-color: #c81623;
+    text-decoration: none;
+    line-height: 29.1px;
+}
+.container .main_left ul li a:hover {
+    background-color: whitesmoke;
+    color: #333333;
+}
+.container .main_left ul li a span {
+    float: right;
+}
+
+.container .main_middle {
+    width: 730px;
+    height: 454px;
+    margin: 13px 5px 0px 10px;
+    position: relative;
+} 
+.container .main_middle > a {
+    display: block;
+    width: 730px;
+    height: 454px;
+    background-image: url(../images/slider.jpg);
+    background-repeat: no-repeat;
+    
+}
+.container .main_middle > a.slider .trans_btn {
+    width: 28px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 197px;
+}
+.container .main_middle > a.slider .trans_btn .turn_r {
+    display: block;
+    background-image: url(../images/china.png);
+    background-position: -61px -50px;
+    height: 22px;
+    width: 13px;
+    position: absolute;
+    top: 19px;
+    right: 7.5px;
+}
+.container .main_middle > a.slider .trans_btn .turn_l {
+    display: block;
+    background-image: url(../images/china.png);
+    background-position: -91px -50px;
+    height: 22px;
+    width: 13px;
+    position: absolute;
+    top: 19px;
+    left: 7.5px;
+}
+.container .main_middle > a.slider .trans_btn.l {
+    left: 0;
+}
+.container .main_middle > a.slider .trans_btn.r {
+    right: 0;
+}
+
+.container .main_middle > ul {
+    /* background-color: blue; */
+    position: absolute;
+    bottom: 0;
+    width: 465px;
+    padding-left: 265px;
+} 
+.container .main_middle > ul li {
+    float: left;
+    padding: 5px 10px;
+} 
+.container .main_middle > ul li a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.8);
+} 
+.container .main_middle > ul li a:hover {
+    background-color: #b61d22;
+}
+
+/* 主体右边框 */
+.container .main_right {
+    height: 452.5px;
+    width: 248px;
+    margin-top: 13px;
+    background-color: white;
+    border: 1px solid #cccccc;
+} 
+.container .main_right .r_list_top {
+    height: 165px;
+    border-bottom: 1px dashed #cccccc;
+}
+.container .main_right .r_list_top .news_box_top {
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+}
+.container .main_right .r_list_top .news_box_top .title {
+    float: left;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-left: 18px;
+    font-weight: bold;
+}
+.container .main_right .r_list_top .news_box_top a {
+    float: right;
+    /* text-decoration: none; */
+    font-size: 16px;
+    padding-top: 10px; 
+    padding-right: 10px;
+    cursor: pointer;
+}
+.container .main_right .r_list_top .news_box_top a span {
+    padding-left: 4px;
+}
+.container .main_right .r_list_top .news_content ul li {
+    float: left;
+    margin: 6px 0 6px 12px  ;
+}
+.container .main_right .r_list_top .news_content ul li a {
+    color: gray;
+    font-size: 14px;
+}
+.container .main_right .r_list_top .news_content ul li a b {
+    color: black;
+}
+.container .main_right .r_list_top .news_content ul li a span {
+    padding-left: 2px;
+}
+.container .main_right .r_list_center  {
+    height: 213px;
+}
+.container .main_right .r_list_center > ul li {
+    float: left;
+}
+.r_list_center > ul > li > a {
+    display: block;
+    width: 61px;
+    height: 69px;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+.r_list_center > ul > li > a.no_r_line {
+    border-right: 1px solid transparent;
+}
+.r_list_center > ul > li > a:hover {
+    background-color: whitesmoke;
+}
+.r_list_center > ul > li > a span {
+    display: block;
+    position: absolute;
+    left: 21px;
+    top: 15px;
+}
+/* 右侧中间各个li标签的图标 */
+/* 第一行 */
+.r_list_center > ul > li > a span.pho_icon{
+    background-image: url(../images/fly.png);
+    background-position: -3px 0px;
+    width: 19px;
+    height: 24px;
+}
+.r_list_center > ul > li > a span.plane {
+    background-image: url(../images/fly.png);
+    background-position: -1px -27px;
+    width: 23px;
+    height: 23px;
+    left: 19px;
+}
+.r_list_center > ul > li > a span.movie {
+    background-image: url(../images/fly.png);
+    background-position: 0px -52px;
+    width: 23px;
+    height: 23px;
+    left: 19px;
+}
+.r_list_center > ul > li > a span.switch {
+    background-image: url(../images/fly.png);
+    background-position: 0px -77px;
+    width: 25px;
+    height: 20px;
+    left: 16px;
+    top: 18px;
+
+}
+/* 第二行 */
+
+/* 第三行 */
+
+.r_list_center > ul > li > a div.menu_text{
+    padding-top: 5px;
+    padding-left: 18px;
+    position: absolute;
+    top: 42px ;
+    font-weight: 600;
+}
+
+.container .main_right .r_list_bot {
+    height: 75px;
+    width: 100%;
+
+}
+.container .main_right .r_list_bot img {
+    width: 250px;
+    height: 75px;
+}
+/* <!-- 页面主体内容end --> */
+
+/* 今日推荐模块 */
+.jd-today {
+    height: 150px;
+    margin: 10px 0;
+}
+.jd-today > div {}
+.jd-today > div .left {
+    height: 150px;
+    width: 210px;
+}
+.jd-today > div .left .icon-today{
+    display: block;
+    width: 210px;
+    height: 150px;
+    background-image: url(../images/today.png);
+    background-position: -213px -136px;
+}
+.jd-today > div .right {
+    width: 1000px;
+    height: 150px;
+    position: relative;
+}
+.jd-today > div .right ul {}
+.jd-today > div .right ul li {
+    float: left;
+}
+.jd-today > div .right ul li a {
+    display: block;
+    width: 248px;
+    height: 150px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.jd-today > div .right ul li a img {
+    display: block;
+}
+.jd-today > div .right .btn {
+    display: block;
+    width: 28px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -32px;
+}
+.jd-today > div .right .btn.btn-left {
+    left: 1px;
+}
+.jd-today > div .right .btn.btn-right {
+    right: -1px;
+}
+
+/* 今日推荐模块end */
+
+/* 页面口号 */
+.ad-slogan {
+    background-color: #f5f5f5;
+    height: 92px;
+}
+.ad-slogan > div ul {}
+.ad-slogan > div ul li {
+    float: left;
+
+}
+.ad-slogan > div ul li img{
+    display: block;
+    height: 54px;  /*92*/
+    width: 220px;  /*300*/
+    padding: 19px 40px;
+}
+
+/* 页面口号end */
+
+/* 购物指南 */
+.jd-compass {
+    margin-top: 20px;
+}
+.jd-compass >div {}
+.jd-compass >div > ul{}
+.jd-compass >div > ul > li {
+    width: 240px;
+    float: left;
+    height: 189px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.jd-compass >div > ul > li ul{}
+.jd-compass >div > ul > li ul li{
+    font-size: 10px;
+    color: gray;
+    line-height: 1.5;
+}
+.jd-compass >div > ul > li ul li.b-wei {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.jd-compass >div >ul span.china-bgicon {
+    display: block;
+    height: 168px;
+    width: 204px;
+    background-image: url(../images/china.png);
+    background-position: 0 -132px;
+    line-height: 1.2;
+}
+.jd-compass >div >ul span.china-bgicon .text-top{
+    font-size: 16px;
+    line-height: 1.8;
+}
+.jd-compass >div >ul span.china-bgicon .text-middle{
+    font-size:12px;
+}
+.jd-compass >div >ul span.china-bgicon a{
+    font-size:12px;
+    text-align: right;
+    display: block;
+    color: #333;
+}
+.jd-compass >div >ul span.china-bgicon .text-bot span{}
+/* 购物指南end */
+
+/* 底部声明 */
+.jd-declare {
+    margin: 40px 0;
+    padding-bottom: 30px;
+}
+.jd-declare > div{}
+.jd-declare > div .up{
+    width: 1210px;
+}
+.jd-declare > div .up ul{
+    margin: 0 auto;
+    width: 1210px;
+    text-align: center;
+}
+.jd-declare > div .up ul li {
+    float: left;
+    border-right: 1px solid #333;
+}
+.jd-declare > div .up ul li.last-text {
+    border-right: transparent;
+}
+.jd-declare > div .up ul li a { 
+    display: block;
+    text-decoration: none;
+    color: #333 ;
+    font-size: 15px;
+    width: 88px;
+    padding: 0 10px;
+}
+.jd-declare > div .middle {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.3;
+    position: relative;
+}
+/* .jd-declare > div .middle > p {
+    height: 20px;
+} */
+.jd-declare > div .middle > p span.police-caps {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/guohui.png);
+    position: absolute;
+    top: 0px;
+    left:140px ;
+}
+.jd-declare > div .bot{
+    margin-top: 20px;
+    text-align: center;
+}
+.jd-declare > div .bot > img {
+    height: 32px;
+    width: 103px;
+    padding-right: 15px;
+}
+
+/* 底部声明end */
