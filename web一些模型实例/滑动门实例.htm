@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滑动门</title>
+    <style>
+        html ,body ,ul {
+            padding: 0;
+            margin:  0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            height: 35px;
+            background-image: url("./images/under.gif");
+        }
+        .box  ul li{
+            border: 1px solid transparent;
+            float: left;
+            margin: 0 10px;
+        }
+        .box  ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding-left: 15px;
+        }
+        .box  ul li:hover a{
+            background-image: url("./images/hover.gif");
+            background-position: left;
+        }
+        .box  ul li a b{
+            text-align: center;
+            line-height: 31px;
+            display: inline-block;
+            height: 31px;
+            padding-right: 15px;
+        }
+        .box  ul li:hover a b {
+            background-image: url("./images/hover.gif");
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            <ul>
+                <li><a href="javascruipt:;"><b class="l_door">Home</b></a> </li>
+                <li><a href="javascruipt:;"><b class="l_door">Contact Us</b></a> </li>
+                <li><a href="javascruipt:;"><b class="l_door">Web Dev</b></a> </li>
+                <li><a href="javascruipt:;"><b class="l_door">Map</b></a> </li>
+            </ul>
+        
+    </div>
+</body>
+</html>
