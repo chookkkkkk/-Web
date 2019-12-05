@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        let show = document.getElementById('show');
+        let t = null
+        t = setTimeout(time,1000);
+        function time() {
+            clearTimeout(t);
+            let timer = new Date();
+            let h = timer.getHours();
+            let m = timer.getMinutes();
+            let s = timer.getSeconds();
+            show.innerText = `${h} : ${m} : ${s}`;
+            t = setTimeout(time,1000);
+        }
+    </script>
+</body>
+</html>

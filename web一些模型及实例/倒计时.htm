@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: skyblue;
+            width: 1000px;
+            margin: 0 auto;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let show = document.getElementsByClassName('box')[0];
+        let t = null
+        let h = 1
+        let m = 1
+        let s = 10
+        t = setTimeout(run_time, 1000)
+        //使用这个函数时应当注意转换成字符串的数字，需要在每次调用这个函数之前再
+        //将变成字符串的数字转化为number类型，才不至于出现 ‘0000001’ 的情况 
+        function display(num) {
+            if (num < 10) {
+                return '0' + num;
+            }else {
+                return num;
+            }
+        }
+        function run_time() {
+            //clearTimeout(t)
+            s--;
+            if ( s == 00 && m == 00 && h == 00) {
+                return;
+            }
+            if ( s == -1 ) {
+                s = 59
+                m -= 1
+                if (m == -1) {
+                    m = 59
+                    h -= 1
+                }
+            }
+            h = +h
+            m = +m
+            //注意这里，每次计时需要计算一次，把变成字符串的h和m编程number类型
+            //s由于每次计时都有计算，所以每次计算完之后都会变回number类型
+            h = display(h);
+            m = display(m);
+            s = display(s);
+            show.innerText = `${h} : ${m} : ${s}`
+            t = setTimeout(run_time, 1000)
+        }
+    </script>
+</body>
+</html>

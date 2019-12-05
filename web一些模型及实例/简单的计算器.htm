@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线计算器</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="text" class="num1">
+        </li>
+        <li>
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+        </li>
+        <li>
+            <input type="text" class="num2">
+        </li>
+        <li>
+            <button class="equals">=</button>
+        </li>
+        <li>
+            <span class="count"></span>
+        </li>
+    </ul>
+
+    <script>
+        function cal(num1, num2, str) {
+            if (str == '+') {  
+                return num1 + num2;
+            }else
+            if (str == '-') {
+                return num1 - num2;
+            }else
+            if (str == '*') {
+                return num1 * num2;
+            }else
+            if (str == '/') {
+                return num1 / num2;
+            }
+        }
+        
+        //获取元素
+        var num1 = document.getElementsByClassName('num1')[0];
+        var num2 = document.getElementsByClassName('num2')[0];
+        var btn = document.getElementsByTagName('button');
+        var count_num = document.getElementsByClassName('count')[0];
+        var equals = document.getElementsByClassName('equals')[0];
+
+
+        //定义一个全局变量
+        var str = '+'
+        //绑定按钮点击事件
+        btn[0].onclick = function () {
+            /* var str = '+'  这个定义的是一个局部变量 */
+            str = '+'
+        }
+        btn[1].onclick = function () {
+            str = '-'
+        }
+        btn[2].onclick = function () {
+            str = '*'
+        }
+        btn[3].onclick = function () {
+            str = "/"
+        }
+
+        
+        equals.onclick = function () {
+            var n1 = num1.value;
+            var n2 = num2.value;
+            if (n1 == undefined || n1.length == 0 ) {
+                alert('第一行是空值')
+                //跳出循环
+                return 
+            if (n2 == undefined || n2.length == 0) {
+                alert('第二行是空值')
+            }
+            n1 = Number(n1);
+            n2 = Number(n2);
+
+            var res = cal(n1,n2,str)
+            count_num.innerHTML = res
+        }
+        
+
+    </script>
+</body>
+</html>
