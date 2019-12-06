@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            background-color: skyblue;
+            width: 500px;
+            height: 400px;
+        }
+        .wrap ul {
+            height: 100px;
+            width: 500px;
+        }
+        .wrap ul li {
+            border: 1px solid #ccc;
+            width: 98px;
+            height: 98px;
+            float: left;
+        }
+        .wrap ul li.active {
+            background-color: red;
+        }
+        .handle {
+            height: 150px;
+            width: 150px;
+        }
+        .handle ul {
+            height: 50px;
+            width: 150px;
+        }
+        .handle ul li {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            line-height: 50px;
+            float: left;
+            color: #111;
+        }
+        .handle ul li:hover {
+            background-color: #ccc;
+        }
+        .ml_50 {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 脚本写入 -->
+    </div>
+    <div class="handle">
+        <ul>
+            <li class="ml_50" id="up">上</li>
+        </ul>
+        <ul>
+            <li id="left">左</li>
+            <li class="ml_50" id="right">右</li>
+        </ul>
+        <ul>
+            <li class="ml_50" id="down">下</li>
+        </ul>
+    </div>
+    <script>
+        let wrap = document.getElementsByClassName('wrap')[0];
+        let handle = document.getElementsByClassName('handle')[0];
+        let col = 5,
+            row = 4,
+            x = 0,
+            y = 0;
+        // 最外部的数组
+        let eles = [];
+
+        //创建棋盘
+        for (let i = 0; i < row; i++) {
+            //创建 ul 标签
+            let ul = document.createElement('ul');
+            // 内嵌的数组
+            let ulArr = [];
+            for (let j = 0; j < col; j++) {
+                let li = document.createElement('li');
+                ulArr.push(li);
+                ul.appendChild(li);
+            }
+            wrap.appendChild(ul);
+            eles.push(ulArr);
+        }
+
+        // 初始化第一个为红色
+        eles[0][0].className = 'active'
+        // 绑定事件
+        handle.addEventListener('click', function (evt) {
+            // 获取点击事件的 id 名
+            let evt_id = evt.target.getAttribute('id')
+            if (evt_id == 'up' ) {
+                y--;
+                // 格子不能出界
+                y < 0? y = 0 : y;
+                // 设置元素类名以产生格子移动的效果
+                eles[y][x].className = 'active';
+                // 排他元素，仅需要改变自己上一布的格子的背景色
+                eles[y+1][x].className = '';
+            }else if (evt_id == 'down') {
+                y++;
+                y > 3 ? y = 3 : y;
+                eles[y][x].className = 'active';
+                eles[y-1][x].className = '';
+            }else if (evt_id == 'left') {
+                x--;
+                x < 0 ? x = 0 : x;
+                eles[y][x].className = 'active';
+                eles[y][x+1].className = '';
+            }else if (evt_id == 'right') {
+                x++;
+                x > 4 ? x = 4 : x;
+                eles[y][x].className = 'active';
+                eles[y][x-1].className = '';
+            }
+        })
+    </script>
+</body>
+</html>

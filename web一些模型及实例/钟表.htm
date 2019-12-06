@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 1px solid #000;
+            height: 400px;
+            width: 400px;
+        }
+        .time {
+            margin: 46px auto;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: relative;
+            
+        }
+        .time > div {
+            transform-origin: center bottom;
+            
+        }
+        .time .hours {
+            width: 5px;
+            height: 75px;
+            background-color: #333333;
+            position: absolute;
+            top: 75px;
+            left: 148px;
+        }
+        .time .minute {
+            width: 3px;
+            height: 90px;
+            position: absolute;
+            top: 60px;
+            left: 149px;
+            background-color: orange;
+        }
+        .time .second {
+            width: 2px;
+            height: 120px;
+            background-color: red;
+            position: absolute;
+            top: 30px;
+            left: 149.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="time">
+            <div class="hours"></div>
+            <div class="minute"></div>
+            <div class="second"></div>
+        </div>
+    </div>
+    <script>
+        let h = document.getElementsByClassName('hours')[0]
+        let m = document.getElementsByClassName('minute')[0]
+        let s = document.getElementsByClassName('second')[0]
+        let timer = null;
+
+        timer = setInterval(() => {
+            let dt = new Date();
+            let ms = dt.getMilliseconds();
+            let second = dt.getSeconds();
+            let hour = dt.getHours();
+            let minute = dt.getMinutes();
+            s.style.transform = `rotate(${ second * 6 }deg)`
+            m.style.transform = `rotate(${ minute * 6 }deg)`
+            h.style.transform = `rotate(${ hour * 30 }deg)`
+        }, 1000 / 60);
+    </script>
+</body>
+</html>

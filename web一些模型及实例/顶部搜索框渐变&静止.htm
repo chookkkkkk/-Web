@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .wrap {
+            height: 300px;
+            width: 650px;
+            margin: 0 auto;
+            
+        }
+        .wrap .header {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+            height: 40px;
+            background-color: rgba(210, 22, 33, 1);
+            position: fixed;
+            top: 0;
+            left: 50% ;
+            margin-left: -325px;
+        }
+        .content {
+            height: 1880px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header"></div>
+        <img src="./images/bg.jpg" alt="">
+    </div>
+    <div class="content"></div>
+    <script>
+        let header = document.getElementsByClassName('header')[0];
+        let wrap = document.getElementsByClassName('wrap')[0];
+        let opacity = 0;
+        let height = 300;
+        
+        // window 对象调用 onscroll 页面滚动
+        window.onscroll = function () {
+            //获取滚动后距离顶部的高度
+            //若想兼容没有声明 doctype 的文档，可采用如下写法
+            //let ttop = document.documentElement.scrollTop || document.body.scrollTop
+            let ttop = document.documentElement.scrollTop;
+            //console.log({scrollTop:ttop})
+            opacity = ttop < height ? ttop / height : 1;
+            //console.log(opacity);
+            header.style.backgroundColor = `rgba(210, 22, 33, ${opacity})`;
+        }
+    </script>
+</body>
+</html>
